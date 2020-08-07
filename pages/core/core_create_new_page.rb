@@ -9,10 +9,14 @@ class CoreCreateNewPage
   DEPLOYMENT = Deployment::CORE
 
   def object_link; {:id => 'collectionobject'} end
+  def loan_in_link; {:id => 'loanin'} end # added
   def acquisition_link; {:id => 'acquisition'} end
   def exhibition_link; {:id => 'exhibition'} end
   def movement_link; {:id => 'movement'} end
+  def media_handling_link; {:id => 'media'} end
+  def object_exit_link; {:id => 'objectexit'} end
   def use_of_collections_link; {:id => 'uoc'} end
+  def valuation_control_link; {:id => 'valuation'} end
   def authority_org_local_link; {:xpath => '//a[@id="organization/local"]'} end
   def authority_org_ulan_link; {:xpath => '//a[@id="organization/ulan"]'} end
   def condition_check_link; {:id => 'conditioncheck'} end
@@ -52,6 +56,11 @@ class CoreCreateNewPage
     wait_for_page_and_click object_link
   end
 
+  #added
+  def click_create_new_loan_in
+    wait_for_page_and_click loan_in_link
+  end
+
   # Clicks the link to create a new acquisition record
   def click_create_new_acquisition
     wait_for_page_and_click acquisition_link
@@ -62,11 +71,26 @@ class CoreCreateNewPage
     wait_for_page_and_click movement_link
   end
 
+  # Clicks the link to create a new media handling record
+  def click_create_new_media
+    wait_for_page_and_click media_handling_link
+  end
+
+  # Clicks the link to create a new object exit record
+  def click_create_new_object_exit
+    wait_for_page_and_click object_exit_link
+  end
+
   # Clicks the link to create a new use of collections procedure
   def click_create_new_use_of_collections
     wait_for_page_and_click use_of_collections_link
   end
 
+  # Clicks the link to create a new valuation control record
+  def click_create_new_valuation_control
+    wait_for_page_and_click valuation_control_link
+  end
+  
   # Clicks the link to create a new exhibition record
   def click_create_new_exhibition
     wait_for_page_and_click exhibition_link

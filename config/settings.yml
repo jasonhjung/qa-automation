@@ -13,7 +13,7 @@ timeout:
 deployment: core
 
 core:
-  base_url: https://core-dev.cspace.berkeley.edu #https://core.collectionspace.org
+  base_url: https://core-dev.cspace.berkeley.edu
   admin:
     username: students@cspace.berkeley.edu #admin@core.collectionspace.org
     password: cspacestudents #Administrator
