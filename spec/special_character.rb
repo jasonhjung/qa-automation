@@ -3,7 +3,7 @@ expectedURL = "https://core-dev.cspace.berkeley.edu/cspace/core/create"
 describe 'CollectionSpace' do
 
   test_run = TestConfig.new
-  test_data = test_run.create_object_test_data
+  test_data = test_run.create_special_character_test_data
   
   include Logging
   include WebDriverManager
@@ -30,10 +30,12 @@ describe 'CollectionSpace' do
       @create_new_page.click_create_new_object
     }
 
-  it('Fills in object record with unique ID and the different variations in test 1') {
-     @object_page
-     sleep(5)
-    }
+  test_data.each do |test|
+    it('Fills in object record with unique ID and the different variations in test 1') {
+      @object_page.create_new_object test
+      @object_page.click_delete
+      }
+    end
   end 
 
 

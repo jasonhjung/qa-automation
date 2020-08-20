@@ -1,0 +1,18 @@
+{
+    "objects": [
+        {
+            "briefDescriptions": [
+                {
+                    "briefDescription": "Test 1 - brief description 1"
+                },
+                {
+                    "briefDescription": "Test 1 - brief description 2"
+                }
+            ]
+        },
+        {
+           "objectNumber": "1234567890"
+        }    
+    
+    ]
+}

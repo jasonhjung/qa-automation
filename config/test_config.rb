@@ -100,6 +100,11 @@ end
     parse_test_data((deployment || @deployment), 'test-data-create-new-object.json')['objects']
   end
 
+  # Returns the test data for the "special character" tests
+  def create_special_character_test_data(deployment = nil)
+    parse_test_data((deployment || @deployment), 'test-data-special-character.json')['objects']
+  end
+
   #added
   def create_autocomplete_term_matching_search_test_data(deployment = nil)
     parse_test_data((deployment || @deployment), 'test-data-autocomplete-term-matching-search.json')['objects']
